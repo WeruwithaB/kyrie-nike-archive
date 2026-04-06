@@ -1,0 +1,32 @@
+/* Using Roboto Slab as a high-quality, web-safe alternative to Nexa Slab */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto+Slab:wght@700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Roboto Slab", serif; /* Implementation of Nexa Slab aesthetic */
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-nike-orange: #F27D26;
+  --color-off-white: #F5F5F5;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black overflow-hidden;
+    font-family: var(--font-sans);
+  }
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+  color: transparent;
+}
+
+.shoe-shadow {
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
